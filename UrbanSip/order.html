@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online - Claire Cafe</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-mug-hot"></i>
+                Claire Cafe
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="order.html" class="active">Order Now</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> <span id="cartCount">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <h1>Order Online</h1>
+            
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">All Items</button>
+                <button class="category-btn" data-category="coffee">Coffee</button>
+                <button class="category-btn" data-category="tea">Tea</button>
+                <button class="category-btn" data-category="food">Food</button>
+            </div>
+            
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="images/espresso.jpg" alt="Espresso">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Espresso</h3>
+                        <p>Rich and bold espresso brewed to perfection.</p>
+                        <div class="menu-item-price">
+                            <span>$3.50</span>
+                            <button class="btn" onclick="addToCart({
+                                id: 1,
+                                name: 'Espresso',
+                                description: 'Rich and bold espresso brewed to perfection.',
+                                price: 3.50,
+                                image: 'images/espresso.jpg'
+                            })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="images/latte.jpg" alt="Latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Latte</h3>
+                        <p>A smooth blend of espresso and steamed milk.</p>
+                        <div class="menu-item-price">
+                            <span>$4.50</span>
+                            <button class="btn" onclick="addToCart({
+                                id: 2,
+                                name: 'Latte',
+                                description: 'A smooth blend of espresso and steamed milk.',
+                                price: 4.50,
+                                image: 'images/latte.jpg'
+                            })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="images/cappuccino.jpg" alt="Cappuccino">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Cappuccino</h3>
+                        <p>Espresso with foamed milk, for a creamy texture.</p>
+                        <div class="menu-item-price">
+                            <span>$4.00</span>
+                            <button class="btn" onclick="addToCart({
+                                id: 3,
+                                name: 'Cappuccino',
+                                description: 'Espresso with foamed milk, for a creamy texture.',
+                                price: 4.00,
+                                image: 'images/cappuccino.jpg'
+                            })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="images/macha.jpg" alt="Macha">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Macha</h3>
+                        <p>Chocolate, espresso, and steamed milk for the perfect corona.</p>
+                        <div class="menu-item-price">
+                            <span>$4.75</span>
+                            <button class="btn" onclick="addToCart({
+                                id: 4,
+                                name: 'Macha',
+                                description: 'Chocolate, espresso, and steamed milk for the perfect corona.',
+                                price: 4.75,
+                                image: 'images/macha.jpg'
+                            })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="images/cold-brew.jpg" alt="Cold Brew">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Cold Brew</h3>
+                        <p>Cold, bold coffee brewed slowly for a smooth taste.</p>
+                        <div class="menu-item-price">
+                            <span>$5.00</span>
+                            <button class="btn" onclick="addToCart({
+                                id: 5,
+                                name: 'Cold Brew',
+                                description: 'Cold, bold coffee brewed slowly for a smooth taste.',
+                                price: 5.00,
+                                image: 'images/cold-brew.jpg'
+                            })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="images/green-tea.jpg" alt="Green Tea">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Green Tea</h3>
+                        <p>Refreshing green tea with antioxidants.</p>
+                        <div class="menu-item-price">
+                            <span>$3.00</span>
+                            <button class="btn" onclick="addToCart({
+                                id: 6,
+                                name: 'Green Tea',
+                                description: 'Refreshing green tea with antioxidants.',
+                                price: 3.00,
+                                image: 'images/green-tea.jpg'
+                            })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="images/chai-latte.jpg" alt="Chai Latte">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chai Latte</h3>
+                        <p>Spiced tea with steamed milk for a comforting drink.</p>
+                        <div class="menu-item-price">
+                            <span>$4.25</span>
+                            <button class="btn" onclick="addToCart({
+                                id: 7,
+                                name: 'Chai Latte',
+                                description: 'Spiced tea with steamed milk for a comforting drink.',
+                                price: 4.25,
+                                image: 'images/chai-latte.jpg'
+                            })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="images/chocolate-cake.jpg" alt="Chocolate Cake">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Chocolate Cake</h3>
+                        <p>Delicious chocolate cake with a creamy frosting.</p>
+                        <div class="menu-item-price">
+                            <span>$5.00</span>
+                            <button class="btn" onclick="addToCart({
+                                id: 8,
+                                name: 'Chocolate Cake',
+                                description: 'Delicious chocolate cake with a creamy frosting.',
+                                price: 5.00,
+                                image: 'images/chocolate-cake.jpg'
+                            })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="images/croissant.jpg" alt="Croissant">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Croissant</h3>
+                        <p>Flaky, buttery pastry, perfect with any drink.</p>
+                        <div class="menu-item-price">
+                            <span>$3.00</span>
+                            <button class="btn" onclick="addToCart({
+                                id: 9,
+                                name: 'Croissant',
+                                description: 'Flaky, buttery pastry, perfect with any drink.',
+                                price: 3.00,
+                                image: 'images/croissant.jpg'
+                            })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="images/muffin.jpg" alt="Muffin">
+                    </div>
+                    <div class="menu-item-content">
+                        <h3>Muffin</h3>
+                        <p>Freshly baked muffins with a hint of sweetness.</p>
+                        <div class="menu-item-price">
+                            <span>$2.50</span>
+                            <button class="btn" onclick="addToCart({
+                                id: 10,
+                                name: 'Muffin',
+                                description: 'Freshly baked muffins with a hint of sweetness.',
+                                price: 2.50,
+                                image: 'images/muffin.jpg'
+                            })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Claire Cafe is a cozy coffee shop dedicated to serving high-quality coffee and creating a warm, welcoming atmosphere for our customers.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="order.html">Order Online</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Coffee Street, Brewville, CA 90210</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(123) 456-7890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@clairecafe.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and special offers.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your Email Address">
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Claire Cafe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
